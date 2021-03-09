@@ -618,7 +618,7 @@ Exit steam completely
 
 Go to “C:\Program Files (x86)\Steam”, drag in the files from the download & replace
 
-CSGO SPECIFICS
+    CSGO SPECIFICS
 - [ ] Launch Options (anything other than these are placebo or will hurt your game instead of help)
 
 -novid -nojoy -no-browser -d3d9ex -tickrate 128 -console
