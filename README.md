@@ -1,20 +1,5 @@
 # Optimization
 
-Download optimizations folder (comes with all programs/scripts needed)
-N/A for now
-
-    Testing programs
-LatencyMon (the lower the better, good for diagnosing bad drivers)
-
-MouseTester (frequency vs. time, data start: 1000, data end: 2001 - good for measuring system stability/smoothness)
-
-    Resources
-CALYPTO Guide
-
-CHEF-KOCH Guide
-
-FR33THY GUIDE(rip)
-
     Good programs
 7zip
 https://www.7-zip.org/a/7z1900-x64.exe
@@ -48,8 +33,6 @@ Once you’ve backed up everything you can think of, you can unplug your interne
 
 - [ ] Change Mouse Settings (6/11, EPP off, cursor)
 
-- [ ] Disable Task View/Cortana on Taskbar
-
 - [ ] Disable Indexing
 
 Right click Local Disk (C:)
@@ -59,9 +42,7 @@ Untick "Allow files on this drive to have contents indexed in addition to file p
 - [ ] DDU
 Run DDU, reboot to safe mode - clean uninstall all drivers. Audio & GPU
 
-- [ ] Install OpenShell
-
-- [ ] Windows Updates
+- [ ] Disable Windows Updates
 
 Go to gpedit.msc
 
@@ -94,21 +75,6 @@ Dism /online /enable-feature /featurename:NetFx3 /All /Source:E:\sources\sxs /Li
 
 Change “/Source:E” to match your USB letter
 
-- [ ] Sound
-
-Disable all devices that aren't used
-
-16 bit, 44.1k on both headphones & mic
-
-Untick "Allow applications to take exclusive control of this device"
-
-All enhancements off
-
-- [ ] Advanced System Settings
-
-Disable Page File, System Restore & Remote Access - Adjust for Best Performance
-
-Extract Nsudo, Install Unlocker
 
     GPEDIT
 
@@ -140,16 +106,7 @@ Turn off notifications network usage - enabled
 
     DRIVERS
 
-- [ ] Install Drivers
-
-Nvidia Driver
-
-use NvSlimmer, turn off everything except core functionality. PhysX on only if you use it
-
-v425.31 - (w7/8.1) (w10) (Best for latency/DPC spikes)
-
-v441.08 - (w7/8.1) (w10) (Optimized for MW/Apex)
-
+- [ ] Get a stripped nvidia driver
 
 - [ ] Snappy Driver Installer
 
@@ -231,10 +188,6 @@ Turn all Windows features off except for
 
 .NET 4.7
 
-Legacy Components/DirectPlay (needed for older games)
-
-Use an old version of VLC instead of WMP
-
 - [ ] Disable Services
 
 Run the Disable Services.bat file with Nsudo - TrustedInstaller & All Privileges
@@ -267,9 +220,6 @@ Services Info
 **Windows Event Log** - WIFI
 
     GPU
-- [ ] Driver
-Low latency driver = 425.31
-Optimized for MW/Apex = 441.08
 
 - [ ] Nvidia Inspector
 Run Nvidia Inspector as administrator and import the preset that’s included
@@ -374,34 +324,6 @@ Enable write caching on this device - on
 
 Turn off windows write-cache buffer flushing on the device - on
 
-    PROCESS LASSO
-- [ ] Process Lasso (less responsive desktop, more responsive/smoother games)
-
-Install & Run Process Lasso, then on first start do this
-
-1st box - "Do not start at login"
-
-2nd box - "Start at login for ALL users", next
-
-"Manage ALL processes Process Lasso has access to”, done
-
-Options > General > Refresh interval(governor), select 10s
-
-Options > CPU > More > Configure foreground boost > Enable both
-
-Highlight all programs (ctrl+a), right click, Priority class always on Idle. I/O Priority on Very Low
-
-Don't use ProBalance, IdleSaver, or SmartTrim; these features hurt more than help
-
-- [ ] Game priority
-
-Set every game .exe to “normal” priority. Anything higher causes input & stability issues
-
-- [ ] csrss.exe
-
-csrss.exe is responsible for mouse and keyboard input. Set it to realtime
-Download and run this regedit
-
     CPU
 - [ ] Windows Timer Resolution
 
@@ -455,13 +377,7 @@ Possible options: decimal 21, 22, 24, 37, 38, 40
 
 decimal 38 works best for most people, including me.
 
-- [ ] Spectre/Meltdown
-Download InSpectre.exe
-If it’s enabled, download this regedit tweak to disable it.
-
 - [ ] Power
-
-Download this power plan, extract it to your main C:\ drive, run cmd as administrator, paste
 
 powercfg -import C:\optimizedpower.pow
 
@@ -585,12 +501,6 @@ Allow the computer to turn off this device to save power - off
 
 Allow this device to wake the computer - off
 
-- [ ] Hosts
-
-Download this hosts file, replace it in
-
-C:\Windows\System32\drivers\etc
-
     Network Adapter Tweaks (recommended)
 
 Energy Efficient Ethernet - OFF
@@ -625,6 +535,3 @@ Go to “C:\Program Files (x86)\Steam”, drag in the files from the download & 
 
 - [ ] Disable Fullscreen Optimizations
 Make sure you change settings for all users!
-
-- [ ] HT
-More FPS with hyper-threading disabled
