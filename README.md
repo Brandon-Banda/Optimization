@@ -48,18 +48,7 @@ Go to gpedit.msc
 
 Computer Configuration\Administrative Templates\Windows Components\Windows Update
 
-Configure automatic updates - disabled
-
-Specify intranet microsoft update service location - enabled
-
-Enter this link into all three boxes on the left
-http:\\neverupdatewindows10.com
-
 Remove access to use all windows update features - enabled
-
-Do not connect to any windows update internet locations - enabled
-
-Do not include drivers with windows updates - enabled
 
 Restart Computer, it’s now safe to plug in your internet cable/connect to wifi
 
